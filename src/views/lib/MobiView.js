@@ -15,10 +15,7 @@ var MobiView = Backbone.View.extend({
     $('[data-href]').on('click',function() {
       App.Router.navigate( $(this).attr('data-href'), true );
       _.delay(function() { window.scrollTo(0,0); }, 250);
-    });
-    // if (options.id !== undefined) {
-    //   $('#' + this.options.id).addClass("current");
-    // }    
+    });   
   },
   header: function () {
 

@@ -6,7 +6,7 @@ var HomeView = MobiView.extend({
   },
 
   render: function() {    
-    $(this.el).html('<section id="home"><h1>Home</h1><a data-href="Next">Next</a></section>');
+    $(this.el).html('<section id="home"><h1>Home</h1><a data-transition="slide-in" data-href="Next">Next</a></section>');
     return this;
   }
 });
