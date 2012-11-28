@@ -9,7 +9,7 @@ App = {
 
 $(document).ready(function() {    
   App.Router = new Router;
-  Backbone.history.start({ pushState: true });
+  Backbone.history.start({ pushState: location.href.indexOf("file://") !== 0 });
   
   App.placeAnchorHooks();
 
