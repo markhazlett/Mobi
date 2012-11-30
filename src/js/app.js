@@ -11,7 +11,7 @@ window.App = window.App || {
 
 $(document).ready(function() {
   App.router = new App.Router();
-  Backbone.history.start({ pushState: location.href.indexOf("file://") !== -1 });
+  Backbone.history.start({ pushState: false });
 
   App.placeAnchorHooks();
 
