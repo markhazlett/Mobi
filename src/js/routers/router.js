@@ -1,6 +1,6 @@
-var Router;
+window.App = window.App || { Views: {} };
 
-Router = Backbone.Router.extend({
+window.App.Router = Backbone.Router.extend({
   routes: {
     "": "home",
     "/": "home",
@@ -18,7 +18,7 @@ Router = Backbone.Router.extend({
   home: function() {
     this.hideAll();
 
-    App.homeView = new HomeView();
+    App.homeView = new App.Views.HomeView();
     App.homeView.render();
 
     $('#home').addClass("current");
@@ -27,7 +27,7 @@ Router = Backbone.Router.extend({
   page: function(id) {
     this.hideAll();
 
-    App.view = new window[id + "View"]({id: id});
+    App.view = new App.Views[id + "View"]({id: id});
     App.view.render();
 
     return $("#" + id).addClass("current");

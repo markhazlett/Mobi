@@ -1,4 +1,6 @@
-var MobiView = Backbone.View.extend({
+var Mobi = Mobi || {};
+
+Mobi.View = Backbone.View.extend({
   el: ".content",
   tagName: "section",
   initialize: function(options) {
@@ -13,12 +15,9 @@ var MobiView = Backbone.View.extend({
     }
 
     $('[data-href]').on('click',function() {
-      App.Router.navigate( $(this).attr('data-href'), true );
+      App.router.navigate( $(this).attr('data-href'), true );
       _.delay(function() { window.scrollTo(0,0); }, 250);
     });
-    // if (options.id !== undefined) {
-    //   $('#' + this.options.id).addClass("current");
-    // }    
   },
   header: function () {
 
