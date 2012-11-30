@@ -1,0 +1,44 @@
+{
+  "name": "Mobi",
+  "description": "Mobile Framework Riding on Backbone",
+  "version": "0.1.0",
+  "homepage": "",
+  "author": {
+    "name": "Mark Hazlett",
+    "email": "markhazlett9@gmail.com",
+    "web": ""
+  },
+  "contributors": [{
+    "name": "Eric Kryski",
+    "email": "e.kryski@gmail.com"
+  }],
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markhazlett/Mobi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/markhazlett/Mobi/issues"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "mocha": "*",
+    "grunt-mocha": "*",
+    "express": ">=3.0"
+  },
+  "keywords": [
+    "mobile",
+    "backbone",
+    "framework"
+  ],
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node static-server.js",
+    "test": "grunt test"
+  }
+}
