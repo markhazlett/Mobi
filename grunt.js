@@ -17,10 +17,10 @@ module.exports = function(grunt) {
       dist: {
         src: [
           "<banner:meta.banner>",
-          "src/js/lib/*.js",
+          "src/js/app.js",
+          "src/js/support/*.js",
           "src/js/routers/*.js",
-          "src/js/views/**/*.js",
-          "src/js/app.js"
+          "src/js/views/*.js"
         ],
         dest: "dist/<%= pkg.name.split('-')[0] %>-<%= pkg.version %>.js"
       }
