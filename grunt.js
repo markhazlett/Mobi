@@ -28,6 +28,10 @@ module.exports = function(grunt) {
       browser: {
         src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
         dest: 'dist/<%= pkg.name %>-min.js'
+      },
+      amd: {
+        src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
+        dest: 'dist/<%= pkg.name %>-amd.js'
       }
     },
     src: {
