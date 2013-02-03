@@ -95,7 +95,7 @@ window.Mobi = window.Mobi || {};
 
 window.Mobi.Router = Backbone.Router.extend({
   renderView: function(view) {
-    return Mobi.Navigator.renderView($('#app-main'), view);
+    return window.Mobi.Navigator.renderView($('#app-main'), view);
   }
 });
 window.Mobi = window.Mobi || {};
@@ -106,7 +106,7 @@ window.Mobi.View = Backbone.View.extend({
     this.events = this.events || events;
     for (key in this.events) {
       if (key.indexOf('click') === 0) {
-        if (Modernizr.touch) {
+        if (window.Modernizr.touch) {
           newKey = key.replace('click', 'touchend');
           oldValue = this.events[key];
           this.events[newKey] = oldValue;
