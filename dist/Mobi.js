@@ -1,3 +1,12 @@
+//  v0.1.0
+//
+// Copyright (c) 2013-2013 Mark Hazlett
+// Distributed under MIT License
+//
+// Documentation and full license available at:
+
+
+window.Mobi = window.Mobi || {};
 window.Mobi = window.Mobi || {};
 
 window.Mobi.Navigator = {
@@ -82,3 +91,29 @@ window.Mobi.Navigator = {
       return setTimeout(after, 400);
     }
   };
+window.Mobi = window.Mobi || {};
+
+window.Mobi.Router = Backbone.Router.extend({
+  renderView: function(view) {
+    return Mobi.Navigator.renderView($('#app-main'), view);
+  }
+});
+window.Mobi = window.Mobi || {};
+
+window.Mobi.View = Backbone.View.extend({
+  delegateEvents: function(events) {
+    var key, newKey, oldValue;
+    this.events = this.events || events;
+    for (key in this.events) {
+      if (key.indexOf('click') === 0) {
+        if (Modernizr.touch) {
+          newKey = key.replace('click', 'touchend');
+          oldValue = this.events[key];
+          this.events[newKey] = oldValue;
+          delete this.events[key];
+        }
+      }
+    }
+    return Backbone.View.prototype.delegateEvents.call(this, this.events);
+  }
+});

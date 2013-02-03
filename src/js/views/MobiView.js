@@ -1,4 +1,6 @@
-Mobi.View = Backbone.View.extend({
+window.Mobi = window.Mobi || {};
+
+window.Mobi.View = Backbone.View.extend({
   delegateEvents: function(events) {
     var key, newKey, oldValue;
     this.events = this.events || events;
