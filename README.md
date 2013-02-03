@@ -21,7 +21,7 @@ You can download the raw source from [GitHub](http://github.com/thedersen/backbo
 
 ### Dev Dependencies
 
-buster >=0.6.2
-grunt-shell >=0.1.3
-grunt-rigger >=0.3.0
-grunt-buster >=0.1.1
+* buster >=0.6.2
+* grunt-shell >=0.1.3
+* grunt-rigger >=0.3.0
+* grunt-buster >=0.1.1
